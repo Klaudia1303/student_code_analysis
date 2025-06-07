@@ -1,0 +1,10 @@
+n=input('numeratore: ')
+d=input('denominatore: ')
+n=int(n)
+d=int(d)
+if(n<d):
+    print('propria')
+if(n>=d)and(n%d)==0:
+    print('apparente')
+if(n>d)and(n%d!=0):
+    print('impropria')

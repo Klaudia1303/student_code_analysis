@@ -1,0 +1,4 @@
+n = int(input("Inserisci numero tabellina: "))
+for i in range(8):
+    for j in range(8):
+        print(i, "*", j, "=", oct(i+j)[2:])

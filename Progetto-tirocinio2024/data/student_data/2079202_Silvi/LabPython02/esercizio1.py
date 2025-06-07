@@ -1,0 +1,5 @@
+print("Questo programma restituisce l'equivalente in secondi dei valori inseriri\n")
+hh=int(input("inserire le ore:"))
+mm=int(input("inserire i minuti:"))
+ss=int(input("inserire i secondi:"))
+print("equivalente in secondi ",hh*3600+mm*60+ss)

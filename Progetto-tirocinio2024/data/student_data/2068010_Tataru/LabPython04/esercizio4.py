@@ -1,0 +1,9 @@
+con=True
+s=0
+while(con==True):
+    a=input()
+    if(a=="*"):
+        break
+    elif(int(a)%3==0):
+        s+=int(a)
+print(s)

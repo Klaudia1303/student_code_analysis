@@ -1,0 +1,190 @@
+Test A_Ex7 
+
+Input: 'file1.txt' 
+
+Output atteso:
+----------------------------------
+14
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+14
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test A_Ex7 
+
+Input: 'file2.txt' 
+
+Output atteso:
+----------------------------------
+17
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+17
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test A_Ex7 
+
+Input: 'file3.txt' 
+
+Output atteso:
+----------------------------------
+18
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+18
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test A_Ex7 
+
+Input: 'file4.txt' 
+
+Output atteso:
+----------------------------------
+20
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+20
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test A_Ex7 
+
+Input: 'file5.txt' 
+
+Output atteso:
+----------------------------------
+0
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+0
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test A_Ex7 
+
+Input: 'file6.txt' 
+
+Output atteso:
+----------------------------------
+2
+----------------------------------
+
+Il codice ha lanciato una eccezione durante il test
+
+Traceback (most recent call last):
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\tester_correzione.py", line 99, in helper_tester_function
+    returned_value = function(*input_data)
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\container.py", line 8, in A_Ex7
+    s=s+int(i)
+ValueError: invalid literal for int() with base 10: '1A2'
+
+Risultato Test: NEGATIVO
+
+******************************
+Test A_Ex7 
+
+Input: 'file7.txt' 
+
+Output atteso:
+----------------------------------
+5
+----------------------------------
+
+Il codice ha lanciato una eccezione durante il test
+
+Traceback (most recent call last):
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\tester_correzione.py", line 99, in helper_tester_function
+    returned_value = function(*input_data)
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\container.py", line 8, in A_Ex7
+    s=s+int(i)
+ValueError: invalid literal for int() with base 10: '1A2'
+
+Risultato Test: NEGATIVO
+
+******************************
+Test A_Ex7 
+
+Input: 'file8.txt' 
+
+Output atteso:
+----------------------------------
+18
+----------------------------------
+
+Il codice ha lanciato una eccezione durante il test
+
+Traceback (most recent call last):
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\tester_correzione.py", line 99, in helper_tester_function
+    returned_value = function(*input_data)
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\container.py", line 8, in A_Ex7
+    s=s+int(i)
+ValueError: invalid literal for int() with base 10: '1a2'
+
+Risultato Test: NEGATIVO
+
+******************************
+Test A_Ex7 
+
+Input: 'file9.txt' 
+
+Output atteso:
+----------------------------------
+19
+----------------------------------
+
+Il codice ha lanciato una eccezione durante il test
+
+Traceback (most recent call last):
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\tester_correzione.py", line 99, in helper_tester_function
+    returned_value = function(*input_data)
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\container.py", line 8, in A_Ex7
+    s=s+int(i)
+ValueError: invalid literal for int() with base 10: '1a2'
+
+Risultato Test: NEGATIVO
+
+******************************
+Test A_Ex7 
+
+Input: 'file10.txt' 
+
+Output atteso:
+----------------------------------
+22
+----------------------------------
+
+Il codice ha lanciato una eccezione durante il test
+
+Traceback (most recent call last):
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\tester_correzione.py", line 99, in helper_tester_function
+    returned_value = function(*input_data)
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\container.py", line 8, in A_Ex7
+    s=s+int(i)
+ValueError: invalid literal for int() with base 10: '1a2'
+
+Risultato Test: NEGATIVO
+
+******************************

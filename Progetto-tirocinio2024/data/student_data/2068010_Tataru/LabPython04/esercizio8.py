@@ -1,0 +1,10 @@
+s1=input()
+s2=input()
+con=True
+while(con==True):
+    if(s1[len(s1)-1]==s2[0]):
+        print(s1,s2)
+        break
+    else:
+        s1=s2
+        s2=input()

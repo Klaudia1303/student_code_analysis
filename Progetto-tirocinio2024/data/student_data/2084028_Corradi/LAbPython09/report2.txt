@@ -1,0 +1,210 @@
+Test A_Ex2 
+
+Input: 'esami1.csv' 
+
+Output atteso:
+----------------------------------
+[('1345', 'Fisica'), ('1346', 'Analisi'), ('1896', 'Geometria'), ('1753', 'Fisica')]
+----------------------------------
+
+Il codice ha lanciato una eccezione durante il test
+
+Traceback (most recent call last):
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\tester_correzione.py", line 99, in helper_tester_function
+    returned_value = function(*input_data)
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\container.py", line 6, in A_Ex2
+    if elem.isalpha():
+AttributeError: 'list' object has no attribute 'isalpha'
+
+Risultato Test: NEGATIVO
+
+******************************
+Test A_Ex2 
+
+Input: 'esami2.csv' 
+
+Output atteso:
+----------------------------------
+[('1346', 'Analisi')]
+----------------------------------
+
+Il codice ha lanciato una eccezione durante il test
+
+Traceback (most recent call last):
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\tester_correzione.py", line 99, in helper_tester_function
+    returned_value = function(*input_data)
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\container.py", line 6, in A_Ex2
+    if elem.isalpha():
+AttributeError: 'list' object has no attribute 'isalpha'
+
+Risultato Test: NEGATIVO
+
+******************************
+Test A_Ex2 
+
+Input: 'esami3.csv' 
+
+Output atteso:
+----------------------------------
+[('1347', 'Analisi'), ('1348', 'Analisi'), ('1347', 'Ricerca Operativa'), ('1349', 'Ricerca Operativa')]
+----------------------------------
+
+Il codice ha lanciato una eccezione durante il test
+
+Traceback (most recent call last):
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\tester_correzione.py", line 99, in helper_tester_function
+    returned_value = function(*input_data)
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\container.py", line 6, in A_Ex2
+    if elem.isalpha():
+AttributeError: 'list' object has no attribute 'isalpha'
+
+Risultato Test: NEGATIVO
+
+******************************
+Test A_Ex2 
+
+Input: 'esami4.csv' 
+
+Output atteso:
+----------------------------------
+[('1100', 'Basi di Dati'), ('1012', 'Basi di Dati'), ('1021', 'Analisi')]
+----------------------------------
+
+Il codice ha lanciato una eccezione durante il test
+
+Traceback (most recent call last):
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\tester_correzione.py", line 99, in helper_tester_function
+    returned_value = function(*input_data)
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\container.py", line 6, in A_Ex2
+    if elem.isalpha():
+AttributeError: 'list' object has no attribute 'isalpha'
+
+Risultato Test: NEGATIVO
+
+******************************
+Test A_Ex2 
+
+Input: 'esami5.csv' 
+
+Output atteso:
+----------------------------------
+[('1345', 'Fisica'), ('1987', 'Fondamenti'), ('1346', 'Analisi'), ('1896', 'Geometria')]
+----------------------------------
+
+Il codice ha lanciato una eccezione durante il test
+
+Traceback (most recent call last):
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\tester_correzione.py", line 99, in helper_tester_function
+    returned_value = function(*input_data)
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\container.py", line 6, in A_Ex2
+    if elem.isalpha():
+AttributeError: 'list' object has no attribute 'isalpha'
+
+Risultato Test: NEGATIVO
+
+******************************
+Test A_Ex2 
+
+Input: 'esami6.csv' 
+
+Output atteso:
+----------------------------------
+[]
+----------------------------------
+
+Il codice ha lanciato una eccezione durante il test
+
+Traceback (most recent call last):
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\tester_correzione.py", line 99, in helper_tester_function
+    returned_value = function(*input_data)
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\container.py", line 6, in A_Ex2
+    if elem.isalpha():
+AttributeError: 'list' object has no attribute 'isalpha'
+
+Risultato Test: NEGATIVO
+
+******************************
+Test A_Ex2 
+
+Input: 'esami7.csv' 
+
+Output atteso:
+----------------------------------
+[]
+----------------------------------
+
+Il codice ha lanciato una eccezione durante il test
+
+Traceback (most recent call last):
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\tester_correzione.py", line 99, in helper_tester_function
+    returned_value = function(*input_data)
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\container.py", line 6, in A_Ex2
+    if elem.isalpha():
+AttributeError: 'list' object has no attribute 'isalpha'
+
+Risultato Test: NEGATIVO
+
+******************************
+Test A_Ex2 
+
+Input: 'esami8.csv' 
+
+Output atteso:
+----------------------------------
+[('1346', 'Analisi'), ('1896', 'Geometria'), ('1753', 'Fisica'), ('1345', 'Fisica'), ('1896', 'Analisi')]
+----------------------------------
+
+Il codice ha lanciato una eccezione durante il test
+
+Traceback (most recent call last):
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\tester_correzione.py", line 99, in helper_tester_function
+    returned_value = function(*input_data)
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\container.py", line 6, in A_Ex2
+    if elem.isalpha():
+AttributeError: 'list' object has no attribute 'isalpha'
+
+Risultato Test: NEGATIVO
+
+******************************
+Test A_Ex2 
+
+Input: 'esami9.csv' 
+
+Output atteso:
+----------------------------------
+[('1346', 'Analisi'), ('1896', 'Geometria'), ('1753', 'Fisica')]
+----------------------------------
+
+Il codice ha lanciato una eccezione durante il test
+
+Traceback (most recent call last):
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\tester_correzione.py", line 99, in helper_tester_function
+    returned_value = function(*input_data)
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\container.py", line 6, in A_Ex2
+    if elem.isalpha():
+AttributeError: 'list' object has no attribute 'isalpha'
+
+Risultato Test: NEGATIVO
+
+******************************
+Test A_Ex2 
+
+Input: 'esami10.csv' 
+
+Output atteso:
+----------------------------------
+[('1345', 'Fisica'), ('1346', 'Analisi'), ('1753', 'Fisica'), ('1753', 'Informatica'), ('1896', 'Informatica')]
+----------------------------------
+
+Il codice ha lanciato una eccezione durante il test
+
+Traceback (most recent call last):
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\tester_correzione.py", line 99, in helper_tester_function
+    returned_value = function(*input_data)
+  File "G:\My Drive\Classroom\Introduzione alla programmazione - A.A. 2022 23 Giuseppe Santucci, Marco Schaerf\Consegne\Lab09\container.py", line 6, in A_Ex2
+    if elem.isalpha():
+AttributeError: 'list' object has no attribute 'isalpha'
+
+Risultato Test: NEGATIVO
+
+******************************

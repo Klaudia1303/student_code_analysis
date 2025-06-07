@@ -1,0 +1,171 @@
+=== 2059687_Dalonzo - Ex8.py ===
+def Ex8(file):
+    """MODIFICARE IL CONTENUTO DI QUESTA FUNZIONE PER SVOLGERE L'ESERCIZIO"""
+    mesi = { 'A' : '01',
+             'B' : '02',
+             'C' : '03',
+             'D' : '04',
+             'E' : '05',
+             'H': '06',
+             'L' : '07',
+             'M' : '08',
+             'P' : '09',
+             'R' : '10',
+             'S' : '11',
+             'T' : '12'}
+    validazione = []
+    codici = open(file, 'r', encoding = 'UTF-8')
+
+    for codice in codici:
+        codice = ''.join(codice.strip().split(' '))
+        
+        #controlli errori : codice, mese , giorno
+        #calcolo data con differenza per M e F
+        # controllo finale per il numero di giorni di Febbraio
+        print(codice)
+        
+        print('*'* 20)
+        if(len(codice) != 16):
+            validazione.append('Codice errato')
+            continue
+        elif(sum(1 for c in codice if c.isalpha()) != 9):
+            validazione.append('Codice errato')
+            continue
+        elif(codice[8] not in mesi):
+             validazione.append('Mese errato')
+             continue
+        elif(int(codice[9:11]) not in range(1,31) and int(codice[9:11]) not in range(41,71)):
+            print('Giorno :' + codice[9:11])
+            validazione.append('Giorno errato')
+            continue
+        else:
+    
+            if(int(codice[9:11]) > 40):
+                if(int(codice[9:11]) > 58 and mesi[codice[8]] == '02'):
+                       validazione.append('Giorno errato')
+                       break
+                if((int(codice[9:11]) - 40) in range(1,9)):
+                       data = '0' + str(int(codice[9:11]) - 40) + '/' + mesi[codice[8]] + '/'
+                else:
+                       data = str(int(codice[9:11]) - 40) + '/' + mesi[codice[8]] + '/'
+            else:
+                if(int(codice[9:11]) > 28 and mesi[codice[8]] == '02'):
+                       validazione.append('Giorno errato')
+                       break
+                if(int(codice[9:11]) in range(1,9)):
+                    data = '0' + codice[9:11] + '/' + mesi[codice[8]] + '/'
+                else:
+                    data = codice[9:11] + '/' + mesi[codice[8]] + '/'
+            if( int( codice[6::8] ) <= 20):
+                 data = data + '20' + codice[6::8]
+            else:
+                data = data + '19' + codice[6::8]
+            validazione.append(data)
+    codici.close()
+    return validazione
+        
+        
+             
+###############################################################################
+
+if __name__ == '__main__':
+    from tester import tester_fun
+    import re
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex8, ["codici1.txt"] , ['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato'])
+    counter_test_positivi += tester_fun(Ex8, ["codici2.txt"] , ['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato', 'Giorno errato', 'Codice errato', 'Giorno errato'])
+    counter_test_positivi += tester_fun(Ex8, ["codici3.txt"] , ['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato', 'Giorno errato', 'Codice errato', 'Giorno errato', '01/11/1921'])
+    counter_test_positivi += tester_fun(Ex8, ["codici4.txt"] , ['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato', 'Giorno errato', 'Codice errato', 'Giorno errato', '01/11/1921', '01/11/1931'])
+    counter_test_positivi += tester_fun(Ex8, ["codici5.txt"] , ['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato', 'Giorno errato', 'Codice errato', 'Giorno errato', '01/11/1921', '01/11/1931', 'Codice errato', 'Giorno errato'])
+
+    print('La funzione',Ex8.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+
+============================================================
+=== 2069743_Beraldo - Ex8.py ===
+def Ex8(file):
+    """MODIFICARE IL CONTENUTO DI QUESTA FUNZIONE PER SVOLGERE L'ESERCIZIO"""
+    mesi = { 'A' : '01',
+             'B' : '02',
+             'C' : '03',
+             'D' : '04',
+             'E' : '05',
+             'H': '06',
+             'L' : '07',
+             'M' : '08',
+             'P' : '09',
+             'R' : '10',
+             'S' : '11',
+             'T' : '12'}
+    validazione = []
+    codici = open(file, 'r', encoding = 'UTF-8')
+
+    for codice in codici:
+        codice = ''.join(codice.strip().split(' '))
+        
+        #controlli errori : codice, mese , giorno
+        #calcolo data con differenza per M e F
+        # controllo finale per il numero di giorni di Febbraio
+        print(codice)
+        
+        print('*'* 20)
+        if(len(codice) != 16):
+            validazione.append('Codice errato')
+            continue
+        elif(sum(1 for c in codice if c.isalpha()) != 9):
+            validazione.append('Codice errato')
+            continue
+        elif(codice[8] not in mesi):
+             validazione.append('Mese errato')
+             continue
+        elif(int(codice[9:11]) not in range(1,31) and int(codice[9:11]) not in range(41,71)):
+            print('Giorno :' + codice[9:11])
+            validazione.append('Giorno errato')
+            continue
+        else:
+    
+            if(int(codice[9:11]) > 40):
+                if(int(codice[9:11]) > 58 and mesi[codice[8]] == '02'):
+                       validazione.append('Giorno errato')
+                       break
+                if((int(codice[9:11]) - 40) in range(1,9)):
+                       data = '0' + str(int(codice[9:11]) - 40) + '/' + mesi[codice[8]] + '/'
+                else:
+                       data = str(int(codice[9:11]) - 40) + '/' + mesi[codice[8]] + '/'
+            else:
+                if(int(codice[9:11]) > 28 and mesi[codice[8]] == '02'):
+                       validazione.append('Giorno errato')
+                       break
+                if(int(codice[9:11]) in range(1,9)):
+                    data = '0' + codice[9:11] + '/' + mesi[codice[8]] + '/'
+                else:
+                    data = codice[9:11] + '/' + mesi[codice[8]] + '/'
+            if( int( codice[6::8] ) <= 20):
+                 data = data + '20' + codice[6::8]
+            else:
+                data = data + '19' + codice[6::8]
+            validazione.append(data)
+    codici.close()
+    return validazione
+        
+        
+             
+###############################################################################
+
+if __name__ == '__main__':
+    from tester import tester_fun
+    import re
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex8, ["codici1.txt"] , ['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato'])
+    counter_test_positivi += tester_fun(Ex8, ["codici2.txt"] , ['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato', 'Giorno errato', 'Codice errato', 'Giorno errato'])
+    counter_test_positivi += tester_fun(Ex8, ["codici3.txt"] , ['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato', 'Giorno errato', 'Codice errato', 'Giorno errato', '01/11/1921'])
+    counter_test_positivi += tester_fun(Ex8, ["codici4.txt"] , ['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato', 'Giorno errato', 'Codice errato', 'Giorno errato', '01/11/1921', '01/11/1931'])
+    counter_test_positivi += tester_fun(Ex8, ["codici5.txt"] , ['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato', 'Giorno errato', 'Codice errato', 'Giorno errato', '01/11/1921', '01/11/1931', 'Codice errato', 'Giorno errato'])
+
+    print('La funzione',Ex8.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+

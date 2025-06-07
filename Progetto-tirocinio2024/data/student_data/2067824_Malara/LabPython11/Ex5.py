@@ -1,0 +1,38 @@
+def Ex5(file):
+    f=open(file,'r',encoding='UTF-8').readlines()
+    d={}
+    for line in f:
+        line=line.strip()
+        if re.match(r'\b[A-Z]{2}[0-9]{3}[A-Z]{2}\b',line):
+            d['auto']=d.get('auto',0)+1
+        elif re.match(r'\b[A-Z]{2}(\d)*(5)\b',line):
+            d['moto']=d.get('moto',0)+1
+        elif re.match(r'[A-Z]{5}(\d)*(5)',line):
+            d['cilclomotore1']=d.get('ciclomotore1',0)+1
+        elif re.match(r'{[A-Z|0-9]}{6}',line):
+            d['cilclomotore2']=d.get('ciclomotore2',0)+1
+        else:
+            d['errata']=d.get('errata',0)+1
+    return d
+        
+        
+        
+        
+        
+    
+###############################################################################
+
+if __name__ == '__main__':
+    from tester import tester_fun
+    import re
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex5, ["targhe1.txt"] , {'auto': 2, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 1})
+    #counter_test_positivi += tester_fun(Ex5, ["targhe2.txt"] , {'auto': 2, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 2})
+    #counter_test_positivi += tester_fun(Ex5, ["targhe3.txt"] , {'auto': 3, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 3})
+    #counter_test_positivi += tester_fun(Ex5, ["targhe4.txt"] , {'auto': 3, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 4})
+    #counter_test_positivi += tester_fun(Ex5, ["targhe5.txt"] , {'auto': 2, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 5})
+    
+    print('La funzione',Ex5.__name__,'ha superato',counter_test_positivi,'test su',total_tests)

@@ -1,0 +1,11 @@
+s1=input()
+s2=input()
+s3=input()
+con=True
+while(con==True):
+    if(len(s1)+len(s2)==len(s3)):
+        print(s1,s2,s3)
+        break
+    s1=s2
+    s2=s3
+    s3=input()

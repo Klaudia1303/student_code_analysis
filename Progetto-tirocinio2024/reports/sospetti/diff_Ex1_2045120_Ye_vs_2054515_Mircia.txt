@@ -1,0 +1,101 @@
+=== 2045120_Ye - Ex1.py ===
+def Ex1(file):
+    # nel regex, la classe di caratteri [-!$%^&*()_+|~=`{}\[\]:";\'<>?,.\/\s] separa le 2 parole da cercare
+	# si specifica una classe così ampia per l'ammissione di simboli come separatori tra parole
+	# ESEMPIO: "cosa, casa" deve essere ammesso
+	# usando invece un regex del tipo \b(\w)\w*(\w)\b\s+\b\1\w*\2\b, si accettano solo i caratteri di spaziatura 
+	# come separatori tra parole
+	# quindi "cosa casa" andrebbe bene, ma "cosa, casa" no
+
+	# !! COSTRUZIONE DEL REGEX !!
+	# 1) raggruppi la prima lettera della prima parola				(\w)
+	# 2) raggruppi l'ultima lettera della prima parola				(\w)(\w)
+	# 3) consideri che ci possono essere sono delle 
+	#    lettere in mezzotra la prima e l'ultima lettera			(\w)\w*(\w)
+	# 4) aggiungi lo spazio che separa le 2 parole					(\w)\w*(\w)\s+
+	# 5) la parola dopo comincia con la prima lettera
+	#    che hai raggruppato nel primo gruppo						(\w)\w*(\w)\s+\1
+	# 6) la parola dopo finisce con l'ultima lettera
+	#    che hai raggruppato nel secondo gruppo						(\w)\w*(\w)\s+\1\2
+	# 7) consideri che ci possono essere sono delle 
+	#    lettere in mezzo tra la prima e l'ultima lettera
+	#    della seconda parola										(\w)\w*(\w)\s+\1\w*\2
+	# 8) aggiungi i boundary per ogni parola						\b(\w)\w*(\w)\b\s+\b\1\w*\2\b
+
+
+	regex = r'\b(\w)\w*(\w)\b[-!$%^&*()_+|~=`{}\[\]:";\'<>?,.\/\s]+\b\1\w*\2\b'
+	file = open(file, encoding="UTF-8")
+	text = file.read()
+	matches = re.findall(regex, text, re.IGNORECASE)
+	return len(matches)
+
+    
+
+    
+###############################################################################
+
+if __name__ == '__main__':
+    from tester import tester_fun
+    import re
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex1, ["file1_1.txt"] , 1)
+    counter_test_positivi += tester_fun(Ex1, ["file1_2.txt"] , 2)
+    counter_test_positivi += tester_fun(Ex1, ["file1_3.txt"] , 3)
+    counter_test_positivi += tester_fun(Ex1, ["file1_4.txt"] , 3)
+    counter_test_positivi += tester_fun(Ex1, ["file1_5.txt"] , 5)
+
+    print('La funzione',Ex1.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+
+============================================================
+=== 2054515_Mircia - Ex1.py ===
+def Ex1(file):
+
+	# nel regex, la classe di caratteri [-!$%^&*()_+|~=`{}\[\]:";\'<>?,.\/\s] separa le 2 parole da cercare
+	# si specifica una classe così ampia per l'ammissione di simboli come separatori tra parole
+	# ESEMPIO: "cosa, casa" deve essere ammesso
+	# usando invece un regex del tipo \b(\w)\w*(\w)\b\s+\b\1\w*\2\b, si accettano solo i caratteri di spaziatura 
+	# come separatori tra parole
+	# quindi "cosa casa" andrebbe bene, ma "cosa, casa" no
+
+	# !! COSTRUZIONE DEL REGEX !!
+	# 1) raggruppi la prima lettera della prima parola				(\w)
+	# 2) raggruppi l'ultima lettera della prima parola				(\w)(\w)
+	# 3) consideri che ci possono essere sono delle 
+	#    lettere in mezzotra la prima e l'ultima lettera			(\w)\w*(\w)
+	# 4) aggiungi lo spazio che separa le 2 parole					(\w)\w*(\w)\s+
+	# 5) la parola dopo comincia con la prima lettera
+	#    che hai raggruppato nel primo gruppo						(\w)\w*(\w)\s+\1
+	# 6) la parola dopo finisce con l'ultima lettera
+	#    che hai raggruppato nel secondo gruppo						(\w)\w*(\w)\s+\1\2
+	# 7) consideri che ci possono essere sono delle 
+	#    lettere in mezzo tra la prima e l'ultima lettera
+	#    della seconda parola										(\w)\w*(\w)\s+\1\w*\2
+	# 8) aggiungi i boundary per ogni parola						\b(\w)\w*(\w)\b\s+\b\1\w*\2\b
+
+
+	regex = r'\b(\w)\w*(\w)\b[-!$%^&*()_+|~=`{}\[\]:";\'<>?,.\/\s]+\b\1\w*\2\b'
+	file = open(file, encoding="UTF-8")
+	text = file.read()
+	matches = re.findall(regex, text, re.IGNORECASE)
+	return len(matches)
+	
+###############################################################################
+
+if __name__ == '__main__':
+	from tester import tester_fun
+	import re
+
+	counter_test_positivi = 0
+	total_tests = 5
+
+	counter_test_positivi += tester_fun(Ex1, ["file1_1.txt"] , 1)
+	counter_test_positivi += tester_fun(Ex1, ["file1_2.txt"] , 2)
+	counter_test_positivi += tester_fun(Ex1, ["file1_3.txt"] , 3)
+	counter_test_positivi += tester_fun(Ex1, ["file1_4.txt"] , 3)
+	counter_test_positivi += tester_fun(Ex1, ["file1_5.txt"] , 5)
+
+	print('La funzione',Ex1.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+

@@ -1,0 +1,11 @@
+numeraleAlieno="349776123345679876543234567876543234569055"
+numeroTerrestre=9510990939794952322311710154344301747012051743844839
+
+km1=0
+km2=0
+for i in range(1,1000):
+    km2=km2+i
+    km1=km1+20
+    if km1==km2:
+        break
+print(i)

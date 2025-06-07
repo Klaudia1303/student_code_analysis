@@ -1,0 +1,6 @@
+n1=input('inserisci un numero: ')
+n1=int(n1)
+n2=input('inserisci un numero: ')
+n2=int(n2)
+n3=input('inserisci un numero: ')
+n3=int(n3)

@@ -1,0 +1,170 @@
+Test A_Ex2 
+
+Input: 'esami1.csv' 
+
+Output atteso:
+----------------------------------
+[('1345', 'Fisica'), ('1346', 'Analisi'), ('1896', 'Geometria'), ('1753', 'Fisica')]
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+[('1345', 'Fisica'), ('1346', 'Analisi'), ('1896', 'Geometria'), ('1753', 'Fisica')]
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test A_Ex2 
+
+Input: 'esami2.csv' 
+
+Output atteso:
+----------------------------------
+[('1346', 'Analisi')]
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+[('1346', 'Analisi')]
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test A_Ex2 
+
+Input: 'esami3.csv' 
+
+Output atteso:
+----------------------------------
+[('1347', 'Analisi'), ('1348', 'Analisi'), ('1347', 'Ricerca Operativa'), ('1349', 'Ricerca Operativa')]
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+[('1347', 'Analisi'), ('1348', 'Analisi'), ('1347', 'Ricerca Operativa'), ('1349', 'Ricerca Operativa')]
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test A_Ex2 
+
+Input: 'esami4.csv' 
+
+Output atteso:
+----------------------------------
+[('1100', 'Basi di Dati'), ('1012', 'Basi di Dati'), ('1021', 'Analisi')]
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+[('1100', 'Basi di Dati'), ('1012', 'Basi di Dati'), ('1021', 'Analisi')]
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test A_Ex2 
+
+Input: 'esami5.csv' 
+
+Output atteso:
+----------------------------------
+[('1345', 'Fisica'), ('1987', 'Fondamenti'), ('1346', 'Analisi'), ('1896', 'Geometria')]
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+[('1345', 'Fisica'), ('1987', 'Fondamenti'), ('1346', 'Analisi'), ('1896', 'Geometria')]
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test A_Ex2 
+
+Input: 'esami6.csv' 
+
+Output atteso:
+----------------------------------
+[]
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+[]
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test A_Ex2 
+
+Input: 'esami7.csv' 
+
+Output atteso:
+----------------------------------
+[]
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+[]
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test A_Ex2 
+
+Input: 'esami8.csv' 
+
+Output atteso:
+----------------------------------
+[('1346', 'Analisi'), ('1896', 'Geometria'), ('1753', 'Fisica'), ('1345', 'Fisica'), ('1896', 'Analisi')]
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+[('1346', 'Analisi'), ('1896', 'Geometria'), ('1753', 'Fisica'), ('1345', 'Fisica'), ('1896', 'Analisi')]
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test A_Ex2 
+
+Input: 'esami9.csv' 
+
+Output atteso:
+----------------------------------
+[('1346', 'Analisi'), ('1896', 'Geometria'), ('1753', 'Fisica')]
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+[('1346', 'Analisi'), ('1896', 'Geometria'), ('1753', 'Fisica')]
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test A_Ex2 
+
+Input: 'esami10.csv' 
+
+Output atteso:
+----------------------------------
+[('1345', 'Fisica'), ('1346', 'Analisi'), ('1753', 'Fisica'), ('1753', 'Informatica'), ('1896', 'Informatica')]
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+[('1345', 'Fisica'), ('1346', 'Analisi'), ('1753', 'Fisica'), ('1753', 'Informatica'), ('1896', 'Informatica')]
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************

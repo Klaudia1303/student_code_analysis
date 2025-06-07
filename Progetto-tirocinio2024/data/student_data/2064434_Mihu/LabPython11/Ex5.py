@@ -1,0 +1,45 @@
+def Ex5(file):
+
+    testo = open(file,encoding='UTF-8').read()
+
+    keys = ['auto','moto','ciclomotore1','ciclomotore2']
+    indice = 0
+    count = 0
+    d = {}
+
+    patternAuto = r'\b[A-Z]{2}\d{3}[A-Z]{2}\b'
+    patternMoto = r'\b[A-Z]{2}\d{5}\b'
+    patternCiclomotore1 = r'\b[A-Z0-9]{5}\b'
+    patternCiclomotore2 = r'\b[A-Z0-9]{6}\b'
+
+    lista_pattern = [patternAuto,patternMoto,patternCiclomotore1,patternCiclomotore2]
+
+    for pattern in lista_pattern :
+
+        m = re.findall(pattern,testo)
+        valore = len(m)
+        d[keys[indice]] = valore
+        count += valore #numero di tutte le targhe corrette
+        indice += 1
+    
+    lista_targhe = testo.strip().split() #lista di tutte le targhe presenti 
+    d['errata'] = len(lista_targhe) - count #numero delle targhe errate
+
+    return d
+    
+###############################################################################
+
+if __name__ == '__main__':
+    from tester import tester_fun
+    import re
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex5, ["targhe1.txt"] , {'auto': 2, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 1})
+    counter_test_positivi += tester_fun(Ex5, ["targhe2.txt"] , {'auto': 2, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 2})
+    counter_test_positivi += tester_fun(Ex5, ["targhe3.txt"] , {'auto': 3, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 3})
+    counter_test_positivi += tester_fun(Ex5, ["targhe4.txt"] , {'auto': 3, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 4})
+    counter_test_positivi += tester_fun(Ex5, ["targhe5.txt"] , {'auto': 2, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 5})
+    
+    print('La funzione',Ex5.__name__,'ha superato',counter_test_positivi,'test su',total_tests)

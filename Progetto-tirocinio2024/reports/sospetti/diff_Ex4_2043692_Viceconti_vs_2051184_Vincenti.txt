@@ -1,0 +1,99 @@
+=== 2043692_Viceconti - Ex4.py ===
+def Ex4(file):
+    fin = open(file, 'r', encoding = "UTF-8")
+    s = fin.readline()
+    diz = {}
+    for riga in fin:
+        riga = riga.strip().split(',')
+        if riga[0] not in diz:
+            k = riga[0]
+            Antenato = riga[1]
+            Erede = riga[2]
+            diz[k] = []
+            if riga[1] not in diz[k]:
+                diz[k].append(riga[1])
+            if riga[2] not in diz[k]:
+                diz[k].append(riga[2])
+        else:
+            k = riga[0]
+            Antenato = diz[k][0]
+            Erede = diz[k][1]
+            if riga[1] == Erede:
+                diz[k].remove(Erede)
+                diz[k].append(riga[2])
+    fin.close()
+    return diz
+    
+
+
+
+    """MODIFICARE IL CONTENUTO DI QUESTA FUNZIONE PER SVOLGERE L'ESERCIZIO"""
+    
+###############################################################################
+
+"""NON MODIFICARE, codice di testing della funzione"""
+
+if __name__ == '__main__':
+    from tester import tester_fun
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex4, ["eredita1.csv"] , {'Anello_di_smeraldi': ['Maria', 'Giorgia'], 'Anello': ['Silvia', 'Paolo']})
+    counter_test_positivi += tester_fun(Ex4, ["eredita2.csv"] , {'Anello_di_smeraldi': ['Marco', 'Giorgio'], 'Anello': ['Silvia', 'Sergio']})
+    counter_test_positivi += tester_fun(Ex4, ["eredita3.csv"] , {'Anello_di_smeraldi': ['Marco', 'Giorgio'], 'Anello': ['Silvia', 'Sergio'], 'Vaso': ['Anna', 'Sergio']})
+    counter_test_positivi += tester_fun(Ex4, ["eredita4.csv"] , {'Anello_di_smeraldi': ['Marco', 'Giorgio'], 'Anello': ['Silvia', 'Giorgio'], 'Vaso': ['Anna', 'Anna']})
+    counter_test_positivi += tester_fun(Ex4, ["eredita5.csv"] , {'Anello_di_smeraldi': ['Marco', 'Giorgio'], 'Anello': ['Silvia', 'Sergio'], 'Vaso': ['Sergio', 'Anna']})
+
+    print('La funzione',Ex4.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+
+============================================================
+=== 2051184_Vincenti - Ex4.py ===
+def Ex4(file):
+    fin = open(file, 'r', encoding = "UTF-8")
+    s = fin.readline()
+    diz = {}
+    for riga in fin:
+        riga = riga.strip().split(',')
+        if riga[0] not in diz:
+            k = riga[0]
+            Antenato = riga[1]
+            Erede = riga[2]
+            diz[k] = []
+            if riga[1] not in diz[k]:
+                diz[k].append(riga[1])
+            if riga[2] not in diz[k]:
+                diz[k].append(riga[2])
+        else:
+            k = riga[0]
+            Antenato = diz[k][0]
+            Erede = diz[k][1]
+            if riga[1] == Erede:
+                diz[k].remove(Erede)
+                diz[k].append(riga[2])
+    fin.close()
+    return diz
+    
+
+
+
+    """MODIFICARE IL CONTENUTO DI QUESTA FUNZIONE PER SVOLGERE L'ESERCIZIO"""
+    
+###############################################################################
+
+"""NON MODIFICARE, codice di testing della funzione"""
+
+if __name__ == '__main__':
+    from tester import tester_fun
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex4, ["eredita1.csv"] , {'Anello_di_smeraldi': ['Maria', 'Giorgia'], 'Anello': ['Silvia', 'Paolo']})
+    counter_test_positivi += tester_fun(Ex4, ["eredita2.csv"] , {'Anello_di_smeraldi': ['Marco', 'Giorgio'], 'Anello': ['Silvia', 'Sergio']})
+    counter_test_positivi += tester_fun(Ex4, ["eredita3.csv"] , {'Anello_di_smeraldi': ['Marco', 'Giorgio'], 'Anello': ['Silvia', 'Sergio'], 'Vaso': ['Anna', 'Sergio']})
+    counter_test_positivi += tester_fun(Ex4, ["eredita4.csv"] , {'Anello_di_smeraldi': ['Marco', 'Giorgio'], 'Anello': ['Silvia', 'Giorgio'], 'Vaso': ['Anna', 'Anna']})
+    counter_test_positivi += tester_fun(Ex4, ["eredita5.csv"] , {'Anello_di_smeraldi': ['Marco', 'Giorgio'], 'Anello': ['Silvia', 'Sergio'], 'Vaso': ['Sergio', 'Anna']})
+
+    print('La funzione',Ex4.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+

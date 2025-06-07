@@ -1,0 +1,1 @@
+#tabellina base ottale 

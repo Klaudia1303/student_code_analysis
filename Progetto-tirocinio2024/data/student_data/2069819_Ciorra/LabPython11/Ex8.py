@@ -1,0 +1,79 @@
+def Ex8(file):
+    #"""MODIFICARE IL CONTENUTO DI QUESTA FUNZIONE PER SVOLGERE L'ESERCIZIO"""
+    f=open(file,encoding='UTF-8')
+    pattern_cod=r'\b([A-Z])([A-Z])([A-Z])\s*([A-Z])([A-Z])([A-Z])\s*([0-9])([0-9])\s*([A-Z])\s*([0-9])([0-9])\s*([A-Z])([0-9])([0-9])([0-9])([A-Z])\b'
+    Lista=[]
+    MESI=['A','B','C','D','E','H','L','M','P','R','S','T']
+    d={}
+    k=0
+    for n in MESI:
+        k+=1
+        d[n]=k
+    import re
+    for riga in f:
+        m=re.search(pattern_cod,riga)
+        if m:
+            anno=int(str(m.group(7))+str(m.group(8)))
+            mese=m.group(9)
+            giorno=int(str(m.group(10))+str(m.group(11)))
+            if anno<=20:
+                anno+=2000
+            else:
+                anno+=1900
+            if mese not in MESI:
+                Lista.append('Mese errato')
+                continue
+            else:
+                if (giorno<1 or 29<=giorno<=40 or 69<=giorno) and mese=='B':
+                    Lista.append('Giorno errato')
+                    continue
+                if (giorno<1 or 30<giorno<=40 or 70<giorno) and (mese=='D' or mese=='H' or mese=='P' or mese=='S'):
+                    Lista.append('Giorno errato')
+                    continue
+                if (giorno<1 or 31<giorno<=40 or 71<giorno):
+                    Lista.append('Giorno errato')
+                    continue
+            #se arriva fin qui la data è buona
+            if giorno>40:
+                giorno-=40
+            if 1<=giorno<=9:
+                giorno='0'+str(giorno)
+            giorno=str(giorno)
+            month=d[mese]
+            if 1<=month<=9:
+                month='0'+str(month)
+            month=str(month)
+            anno=str(anno)
+            data=giorno+'/'+month+'/'+anno
+            Lista.append(data)
+        else:
+            Lista.append('Codice errato')       
+    f.close()
+    return(Lista)
+        
+    
+    
+###############################################################################
+
+if __name__ == '__main__':
+    from tester import tester_fun
+    import re
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex8, ["codici1.txt"] , ['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato'])
+    counter_test_positivi += tester_fun(Ex8, ["codici2.txt"] , ['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato', 'Giorno errato', 'Codice errato', 'Giorno errato'])
+    counter_test_positivi += tester_fun(Ex8, ["codici3.txt"] , ['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato', 'Giorno errato', 'Codice errato', 'Giorno errato', '01/11/1921'])
+    counter_test_positivi += tester_fun(Ex8, ["codici4.txt"] , ['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato', 'Giorno errato', 'Codice errato', 'Giorno errato', '01/11/1921', '01/11/1931'])
+    counter_test_positivi += tester_fun(Ex8, ["codici5.txt"] , ['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato', 'Giorno errato', 'Codice errato', 'Giorno errato', '01/11/1921', '01/11/1931', 'Codice errato', 'Giorno errato'])
+
+    print('La funzione',Ex8.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+
+
+    pattern_nome_cognome= r'\b(A-Z)(A-Z)(A-Z)\s*\(A-Z)(A-Z)(A-Z)\s*'
+    pattern_anno=r'(0-9)(0-9)\s*'
+    pattern_mese=r'(A-Z)\s*'
+    patter_giorno=r'(0-9)(0-9)\s*'
+    patter_restante=r'(A-Z)(0-9)(0-9)(0-9)(A-Z)\b'
+    pattern_codice=pattern_nome_cognome+pattern_anno+pattern_mese+patter_giorno+patter_restante

@@ -1,0 +1,5 @@
+s1=input('inserire stringa')
+s2=input('inserire stringa 2')
+for i in range(len(s1)):
+    if s1[i] not in s2:
+        print(s1[i],end='')

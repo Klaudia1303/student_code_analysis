@@ -1,0 +1,7 @@
+n1=int(input('numero intero'))
+n2=int(input('numero intero'))
+n3=int(input('numero intero'))
+x=max(n1,n2,n3)
+y=min(n1,n2,n3)
+z=((n1+n2+n3)-(x+y))
+print(x,z,y)

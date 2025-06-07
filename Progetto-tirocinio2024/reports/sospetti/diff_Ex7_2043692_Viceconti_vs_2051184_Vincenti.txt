@@ -1,0 +1,95 @@
+=== 2043692_Viceconti - Ex7.py ===
+def Ex7(file):
+    fin = open(file, 'r', encoding = "UTF-8")
+    diz = {}
+    Conta = 0
+    ListaIP = []
+    diz['invalidi']= 0
+    diz['domestici'] = 0
+    diz['altri'] = 0
+    pattern = r'\b(\d*)\.(\d*)\.(\d*)\.(\d*)\b'
+    
+    for riga in fin:
+        riga.strip()
+        Conta += 1
+        IP = re.search(pattern,riga)
+        if len(IP.group(1)) <= 3 and len(IP.group(2)) <= 3 and len(IP.group(3)) <= 3 and len(IP.group(4)) <= 3:
+            if int(IP.group(1)) == 192 and int(IP.group(2)) == 168 and int(IP.group(3)) <= 255 and int(IP.group(4)) <= 255:
+                diz['domestici'] += 1
+            elif int(IP.group(1)) <= 255 and int(IP.group(2)) <= 255 and int(IP.group(3)) <= 255 and int(IP.group(4)) <= 255:
+                diz['altri'] += 1
+        else:
+            continue
+    diz['invalidi'] = Conta - diz['domestici'] - diz['altri']
+    fin.close()
+    return diz
+            
+        
+        
+    """MODIFICARE IL CONTENUTO DI QUESTA FUNZIONE PER SVOLGERE L'ESERCIZIO"""    
+    
+###############################################################################
+
+if __name__ == '__main__':
+    from tester import tester_fun
+    import re
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex7, ["ip1.txt"] , {'invalidi': 0, 'domestici': 0, 'altri': 5})
+    counter_test_positivi += tester_fun(Ex7, ["ip2.txt"] , {'invalidi': 2, 'domestici': 1, 'altri': 2})
+    counter_test_positivi += tester_fun(Ex7, ["ip3.txt"] , {'invalidi': 1, 'domestici': 1, 'altri': 3})
+    counter_test_positivi += tester_fun(Ex7, ["ip4.txt"] , {'invalidi': 1, 'domestici': 1, 'altri': 3})
+    counter_test_positivi += tester_fun(Ex7, ["ip5.txt"] , {'invalidi': 3, 'domestici': 0, 'altri': 2})
+    
+    print('La funzione',Ex7.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+
+============================================================
+=== 2051184_Vincenti - Ex7.py ===
+def Ex7(file):
+    fin = open(file, 'r', encoding = "UTF-8")
+    diz = {}
+    Conta = 0
+    ListaIP = []
+    diz['invalidi']= 0
+    diz['domestici'] = 0
+    diz['altri'] = 0
+    pattern = r'\b(\d*)\.(\d*)\.(\d*)\.(\d*)\b'
+    
+    for riga in fin:
+        riga.strip()
+        Conta += 1
+        IP = re.search(pattern,riga)
+        if len(IP.group(1)) <= 3 and len(IP.group(2)) <= 3 and len(IP.group(3)) <= 3 and len(IP.group(4)) <= 3:
+            if int(IP.group(1)) == 192 and int(IP.group(2)) == 168 and int(IP.group(3)) <= 255 and int(IP.group(4)) <= 255:
+                diz['domestici'] += 1
+            elif int(IP.group(1)) <= 255 and int(IP.group(2)) <= 255 and int(IP.group(3)) <= 255 and int(IP.group(4)) <= 255:
+                diz['altri'] += 1
+        else:
+            continue
+    diz['invalidi'] = Conta - diz['domestici'] - diz['altri']
+    fin.close()
+    return diz
+            
+        
+        
+    """MODIFICARE IL CONTENUTO DI QUESTA FUNZIONE PER SVOLGERE L'ESERCIZIO"""    
+    
+###############################################################################
+
+if __name__ == '__main__':
+    from tester import tester_fun
+    import re
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex7, ["ip1.txt"] , {'invalidi': 0, 'domestici': 0, 'altri': 5})
+    counter_test_positivi += tester_fun(Ex7, ["ip2.txt"] , {'invalidi': 2, 'domestici': 1, 'altri': 2})
+    counter_test_positivi += tester_fun(Ex7, ["ip3.txt"] , {'invalidi': 1, 'domestici': 1, 'altri': 3})
+    counter_test_positivi += tester_fun(Ex7, ["ip4.txt"] , {'invalidi': 1, 'domestici': 1, 'altri': 3})
+    counter_test_positivi += tester_fun(Ex7, ["ip5.txt"] , {'invalidi': 3, 'domestici': 0, 'altri': 2})
+    
+    print('La funzione',Ex7.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+

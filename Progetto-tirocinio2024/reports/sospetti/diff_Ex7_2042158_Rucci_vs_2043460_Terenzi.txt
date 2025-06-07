@@ -1,0 +1,103 @@
+=== 2042158_Rucci - Ex7.py ===
+def Ex7(file):
+    import re
+    d={}
+    d['invalidi']=0
+    d['domestici']=0
+    d['altri']=0
+    vf=1
+    f=open(file, encoding='UTF-8')
+    s=f.readline()
+    while len(s)>0:
+        vf=1
+        s=s.strip().split('.')
+        for elem in s:
+            if int(elem)<0 or int(elem)>255 or elem=='0000' or len(s)!=4 :
+                d['invalidi']=int(d['invalidi'])+1
+                vf=0
+        if s[0]=='192' and s[1]=='168' and vf==1:
+            
+            if  (0<=int(s[2])<=255) and (0<=int(s[3])<=255) :
+                d['domestici']=int(d['domestici'])+1
+            else:
+                d['altri']=int(d['altri'])+1
+                print('siuuu')
+        elif  vf==1:
+            print(s)
+            d['altri']=int(d['altri'])+1
+                        
+        s=f.readline()
+
+
+        
+    return d
+                    
+###############################################################################
+
+if __name__ == '__main__':
+    from tester import tester_fun
+    import re
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex7, ["ip1.txt"] , {'invalidi': 0, 'domestici': 0, 'altri': 5})
+    counter_test_positivi += tester_fun(Ex7, ["ip2.txt"] , {'invalidi': 2, 'domestici': 1, 'altri': 2})
+    counter_test_positivi += tester_fun(Ex7, ["ip3.txt"] , {'invalidi': 1, 'domestici': 1, 'altri': 3})
+    counter_test_positivi += tester_fun(Ex7, ["ip4.txt"] , {'invalidi': 1, 'domestici': 1, 'altri': 3})
+    counter_test_positivi += tester_fun(Ex7, ["ip5.txt"] , {'invalidi': 3, 'domestici': 0, 'altri': 2})
+    
+    print('La funzione',Ex7.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+
+============================================================
+=== 2043460_Terenzi - Ex7.py ===
+def Ex7(file):
+    import re
+    d={}
+    d['invalidi']=0
+    d['domestici']=0
+    d['altri']=0
+    vf=1
+    f=open(file, encoding='UTF-8')
+    s=f.readline()
+    while len(s)>0:
+        vf=1
+        s=s.strip().split('.')
+        for elem in s:
+            if int(elem)<0 or int(elem)>255 or elem=='0000' or len(s)!=4 :
+                d['invalidi']=int(d['invalidi'])+1
+                vf=0
+        if s[0]=='192' and s[1]=='168' and vf==1:
+            
+            if  (0<=int(s[2])<=255) and (0<=int(s[3])<=255) :
+                d['domestici']=int(d['domestici'])+1
+            else:
+                d['altri']=int(d['altri'])+1
+                print('siuuu')
+        elif  vf==1:
+            print(s)
+            d['altri']=int(d['altri'])+1
+                        
+        s=f.readline()
+
+
+        
+    return d
+                    
+###############################################################################
+
+if __name__ == '__main__':
+    from tester import tester_fun
+    import re
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex7, ["ip1.txt"] , {'invalidi': 0, 'domestici': 0, 'altri': 5})
+    counter_test_positivi += tester_fun(Ex7, ["ip2.txt"] , {'invalidi': 2, 'domestici': 1, 'altri': 2})
+    counter_test_positivi += tester_fun(Ex7, ["ip3.txt"] , {'invalidi': 1, 'domestici': 1, 'altri': 3})
+    counter_test_positivi += tester_fun(Ex7, ["ip4.txt"] , {'invalidi': 1, 'domestici': 1, 'altri': 3})
+    counter_test_positivi += tester_fun(Ex7, ["ip5.txt"] , {'invalidi': 3, 'domestici': 0, 'altri': 2})
+    
+    print('La funzione',Ex7.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+

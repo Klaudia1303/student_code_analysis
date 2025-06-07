@@ -1,0 +1,91 @@
+=== 2044202_Raybaudi - Ex7.py ===
+def Ex7(file):
+    f=open(file,encoding='UTF-8')
+    s=f.readlines()
+    f.close()
+    d={'invalidi':0,'domestici':0,'altri':0}
+    conta=0
+    for riga in s:
+        riga=riga.strip()
+        riga=riga.split('.')
+        for num in riga:
+            if 0<=int(num)<=255 and len(num)<=3:
+                conta+=1
+        if conta==4:
+            conta=0
+            if int(riga[0])==192 and int(riga[1])==168:
+                d['domestici']+=1
+            else:
+                d['altri']+=1
+        else:
+            conta=0
+            d['invalidi']+=1
+    return d
+        
+        
+    
+    
+###############################################################################
+
+if __name__ == '__main__':
+    from tester import tester_fun
+    import re
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex7, ["ip1.txt"] , {'invalidi': 0, 'domestici': 0, 'altri': 5})
+    counter_test_positivi += tester_fun(Ex7, ["ip2.txt"] , {'invalidi': 2, 'domestici': 1, 'altri': 2})
+    counter_test_positivi += tester_fun(Ex7, ["ip3.txt"] , {'invalidi': 1, 'domestici': 1, 'altri': 3})
+    counter_test_positivi += tester_fun(Ex7, ["ip4.txt"] , {'invalidi': 1, 'domestici': 1, 'altri': 3})
+    counter_test_positivi += tester_fun(Ex7, ["ip5.txt"] , {'invalidi': 3, 'domestici': 0, 'altri': 2})
+    
+    print('La funzione',Ex7.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+
+============================================================
+=== 2047101_Robotti - Ex7.py ===
+def Ex7(file):
+    f=open(file,encoding='utf-8')
+    s=f.readlines()
+    f.close()
+    d={'invalidi':0,'domestici':0,'altri':0}
+    conta=0
+    for riga in s:
+        riga=riga.strip()
+        riga=riga.split('.')
+        for num in riga:
+            if 0 <= int(num) <= 255 and len(num) <= 3:
+                conta += 1
+        if conta == 4:
+            conta=0
+            if int(riga[0]) == 192 and int(riga[1]) == 168:
+                d['domestici'] += 1
+            else:
+                d['altri'] += 1
+        else:
+            conta=0
+            d['invalidi'] += 1
+    return d
+        
+        
+            
+            
+        
+    
+###############################################################################
+
+if __name__ == '__main__':
+    from tester import tester_fun
+    import re
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex7, ["ip1.txt"] , {'invalidi': 0, 'domestici': 0, 'altri': 5})
+    counter_test_positivi += tester_fun(Ex7, ["ip2.txt"] , {'invalidi': 2, 'domestici': 1, 'altri': 2})
+    counter_test_positivi += tester_fun(Ex7, ["ip3.txt"] , {'invalidi': 1, 'domestici': 1, 'altri': 3})
+    counter_test_positivi += tester_fun(Ex7, ["ip4.txt"] , {'invalidi': 1, 'domestici': 1, 'altri': 3})
+    counter_test_positivi += tester_fun(Ex7, ["ip5.txt"] , {'invalidi': 3, 'domestici': 0, 'altri': 2})
+    
+    print('La funzione',Ex7.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+

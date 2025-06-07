@@ -1,0 +1,12 @@
+a=input('inserisci una stringa: ')
+l1=len(a)
+b=input('inserisci una stringa: ')
+l2=len(b)
+s=input('inserisci una stringa: ')
+while (l1+l2)!=len(s):
+    l1=l2
+    a=b
+    l2=len (s)
+    b=s
+    s=input('inserisci una stringa: ')
+print (a,b,s,sep=' ')

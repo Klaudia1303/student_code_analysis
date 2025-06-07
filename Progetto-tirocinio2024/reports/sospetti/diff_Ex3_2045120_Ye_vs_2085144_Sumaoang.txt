@@ -1,0 +1,73 @@
+=== 2045120_Ye - Ex3.py ===
+def Ex3(file):
+    # la classe di caratteri [-!$%^&*()_+|~=`{}\[\]:";\'<>?,.\/ \t\r], che 
+    # separa le parole, non contiene \n rispetto agli esercizi precedenti.
+    # il testo richiede che le 3 parole siano nella stessa riga
+
+	# !! COSTRUZIONE DEL REGEX !!
+    # 1) raggruppi una lettera				 						(\w)
+    # 2) la lettera adiacente deve essere uguale 
+	#    affinché ci sia una doppia									(\w)\1
+	# 3) consideri che la doppia potrebbe trovarsi 
+	#    in una qualunque posizione all'interno
+	#    della parola												\w*(\w)\1\w*
+	# 4) le parole successive dovranno contenere la
+	#    stessa doppia della prima parola e saranno
+	#    del tipo													\w*\1\1\w*
+	# 5) componi il regex di 3 parole								\w*(\w)\1\w* separatore \w*\1\1\w* separatore \w*\1\1\w*
+	#    con la classe [-!$%^&*()_+|~=`{}\[\]:";\'<>?,.\/ \t\r]
+	#    come separatore
+	# 6) aggiungi i boundary										\b\w*(\w)\1\w*\b separatore \b\w*\1\1\w*\b separatore \b\w*\1\1\w*\b
+
+    regex = r'\b\w*(\w)\1\w*\b[-!$%^&*()_+|~=`{}\[\]:";\'<>?,.\/ \t\r]+\b\w*\1\1\w*\b[-!$%^&*()_+|~=`{}\[\]:";\'<>?,.\/ \t\r]+\b\w*\1\1\w*\b' 
+    file = open(file, encoding="UTF-8")
+    text = file.read()
+    matches = re.findall(regex, text, re.IGNORECASE)
+    return len(matches)
+
+    
+    
+    
+###############################################################################
+
+if __name__ == '__main__':
+    from tester import tester_fun
+    import re
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex3, ["file2_1.txt"] , 1)
+    counter_test_positivi += tester_fun(Ex3, ["file2_2.txt"] , 2)
+    counter_test_positivi += tester_fun(Ex3, ["file2_3.txt"] , 3)
+    counter_test_positivi += tester_fun(Ex3, ["file2_4.txt"] , 4)
+    counter_test_positivi += tester_fun(Ex3, ["file2_5.txt"] , 5)
+
+    print('La funzione',Ex3.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+
+============================================================
+=== 2085144_Sumaoang - Ex3.py ===
+def Ex3(file):
+    r = r'\b\w*(\w)\1\w*\b[-!$%^&*()_+|~=`{}\[\]:";\'<>?,.\/ \t\r]+\b\w*\1\1\w*\b[-!$%^&*()_+|~=`{}\[\]:";\'<>?,.\/ \t\r]+\b\w*\1\1\w*\b' 
+    f1 = open(file, encoding="UTF-8")
+    f2 = f1.read()
+    m = re.findall(r, f2, re.IGNORECASE)
+    return len(m)
+    
+###############################################################################
+
+if __name__ == '__main__':
+    from tester import tester_fun
+    import re
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex3, ["file2_1.txt"] , 1)
+    counter_test_positivi += tester_fun(Ex3, ["file2_2.txt"] , 2)
+    counter_test_positivi += tester_fun(Ex3, ["file2_3.txt"] , 3)
+    counter_test_positivi += tester_fun(Ex3, ["file2_4.txt"] , 4)
+    counter_test_positivi += tester_fun(Ex3, ["file2_5.txt"] , 5)
+
+    print('La funzione',Ex3.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+

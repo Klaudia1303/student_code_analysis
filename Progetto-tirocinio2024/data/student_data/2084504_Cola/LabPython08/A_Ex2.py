@@ -1,0 +1,28 @@
+def A_Ex2(l):
+     """MODIFICARE IL CONTENUTO DI QUESTA FUNZIONE PER SVOLGERE L'ESERCIZIO"""
+     L=[]
+     for c in range(ord('a'),ord('z')+1):
+          for s in l:
+               x=s.count(chr(c))
+               if x>=2:
+                    L.append(chr(c))
+     return set(L)
+###############################################################################
+
+"""NON MODIFICARE IL SEGUENTE CODICE (codice di test della funzione)"""
+
+if __name__ == '__main__':
+    from tester import tester_fun
+
+    """SE NON VOLETE ESEGUIRE UN TEST COMMENTATE LA RIGA RELATIVA CON #"""
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(A_Ex2, [['casa', 'albero', 'bello']] , {'a','l'})
+    counter_test_positivi += tester_fun(A_Ex2, [['ciao', 'ciao']] , set())
+    counter_test_positivi += tester_fun(A_Ex2, [['aa','aa','hghjklhl']] , {'a','h','l'})
+    counter_test_positivi += tester_fun(A_Ex2, [[]] , set())
+    counter_test_positivi += tester_fun(A_Ex2, [['cogito', 'ergo', 'sum']] , {'o'})
+
+
+    print('La funzione',A_Ex2.__name__,'ha superato',counter_test_positivi,'test su',total_tests)

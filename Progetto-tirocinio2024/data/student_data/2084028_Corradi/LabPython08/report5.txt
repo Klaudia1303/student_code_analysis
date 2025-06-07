@@ -1,0 +1,170 @@
+Test A_Ex5 
+
+Input: {('Giuseppe', 'Rieti'), ('Marco', 'Roma'), ('Giovanni', 'Napoli'), ('Aldo', 'Torino')}, {('Napoli', 'Campania'), ('Benevento', 'Campania'), ('Genova', 'Liguria'), ('Roma', 'Lazio'), ('Rieti', 'Lazio')} 
+
+Output atteso:
+----------------------------------
+{('Giovanni', 'Campania'), ('Marco', 'Lazio'), ('Giuseppe', 'Lazio')}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{('Giovanni', 'Campania'), ('Marco', 'Lazio'), ('Giuseppe', 'Lazio')}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test A_Ex5 
+
+Input: {('Giovanni', 'Napoli')}, {('Roma', 'Lazio')} 
+
+Output atteso:
+----------------------------------
+set()
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+set()
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test A_Ex5 
+
+Input: set(), {('Napoli', 'Campania')} 
+
+Output atteso:
+----------------------------------
+set()
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+set()
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test A_Ex5 
+
+Input: {('Giovanni', 'Napoli')}, {('Napoli', 'Campania')} 
+
+Output atteso:
+----------------------------------
+{('Giovanni', 'Campania')}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{('Giovanni', 'Campania')}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test A_Ex5 
+
+Input: {('Marco', 'Roma'), ('Giovanni', 'Napoli')}, {('Napoli', 'Campania'), ('Rieti', 'Lazio'), ('Roma', 'Lazio')} 
+
+Output atteso:
+----------------------------------
+{('Giovanni', 'Campania'), ('Marco', 'Lazio')}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{('Giovanni', 'Campania'), ('Marco', 'Lazio')}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test A_Ex5 
+
+Input: {('Giuseppe', 'Rieti'), ('Marco', 'Roma'), ('Gianna', 'Avellino'), ('Aldo', 'Torino')}, {('Genova', 'Liguria'), ('Benevento', 'Campania'), ('Roma', 'Lazio'), ('Rieti', 'Lazio'), ('Avellino', 'Campania')} 
+
+Output atteso:
+----------------------------------
+{('Giuseppe', 'Lazio'), ('Marco', 'Lazio'), ('Gianna', 'Campania')}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{('Gianna', 'Campania'), ('Marco', 'Lazio'), ('Giuseppe', 'Lazio')}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test A_Ex5 
+
+Input: {('Gianna', 'Avellino')}, {('Roma', 'Lazio')} 
+
+Output atteso:
+----------------------------------
+set()
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+set()
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test A_Ex5 
+
+Input: set(), {('Avellino', 'Campania')} 
+
+Output atteso:
+----------------------------------
+set()
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+set()
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test A_Ex5 
+
+Input: {('Gianna', 'Avellino')}, {('Avellino', 'Campania')} 
+
+Output atteso:
+----------------------------------
+{('Gianna', 'Campania')}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{('Gianna', 'Campania')}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test A_Ex5 
+
+Input: {('Marco', 'Roma'), ('Gianna', 'Avellino')}, {('Rieti', 'Lazio'), ('Avellino', 'Campania'), ('Roma', 'Lazio')} 
+
+Output atteso:
+----------------------------------
+{('Marco', 'Lazio'), ('Gianna', 'Campania')}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{('Marco', 'Lazio'), ('Gianna', 'Campania')}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************

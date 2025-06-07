@@ -1,0 +1,33 @@
+def A_Ex8(l):
+    le=[]
+    ll=[]
+    for a in l:
+        for b in a:
+            le.append(b)
+    for i in le:
+        if le.count(i)<2:
+            ll.append(i)
+    ins=set(ll)
+    return ins
+                
+            
+
+
+
+   
+
+if __name__ == '__main__':
+    from tester import tester_fun
+
+    """SE NON VOLETE ESEGUIRE UN TEST COMMENTATE LA RIGA RELATIVA CON #"""
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(A_Ex8, [[{3,2,90},{2,87,23},{2,23,3}]] , {90,87})
+    counter_test_positivi += tester_fun(A_Ex8, [[set(),{-10},{2}]] , {-10,2})
+    counter_test_positivi += tester_fun(A_Ex8, [[set()]] , set())
+    counter_test_positivi += tester_fun(A_Ex8, [[set(),{10,-2},{10},{-2}]] , set())
+    counter_test_positivi += tester_fun(A_Ex8, [[set(),{10,-9,4},{4,-5,2},{3,7,4}]] , {10,-9,-5,2,3,7})
+
+
+    print('La funzione',A_Ex8.__name__,'ha superato',counter_test_positivi,'test su',total_tests)

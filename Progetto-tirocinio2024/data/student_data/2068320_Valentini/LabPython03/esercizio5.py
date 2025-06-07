@@ -1,0 +1,11 @@
+s=input("Inserire una stringa: ")
+if1=s.isalpha()
+if2=s.islower()
+while if1!=True or if2!=True:
+    l=len(s)
+    print(s[0]+s[l-1])
+    s=input("Inserire una stringa: ")
+    if1=s.isalpha()
+    if2=s.islower()
+l=len(s)
+print(s[0]+s[l-1])

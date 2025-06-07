@@ -1,0 +1,170 @@
+Test Ex4 
+
+Input: 'eredita1.csv' 
+
+Output atteso:
+----------------------------------
+{'Anello_di_smeraldi': ['Maria', 'Giorgia'], 'Anello': ['Silvia', 'Paolo']}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'Anello_di_smeraldi': ['Maria', 'Giorgia'], 'Anello': ['Silvia', 'Paolo']}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex4 
+
+Input: 'eredita2.csv' 
+
+Output atteso:
+----------------------------------
+{'Anello_di_smeraldi': ['Marco', 'Giorgio'], 'Anello': ['Silvia', 'Sergio']}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'Anello_di_smeraldi': ['Marco', 'Giorgio'], 'Anello': ['Silvia', 'Sergio']}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex4 
+
+Input: 'eredita3.csv' 
+
+Output atteso:
+----------------------------------
+{'Anello_di_smeraldi': ['Marco', 'Giorgio'], 'Anello': ['Silvia', 'Sergio'], 'Vaso': ['Anna', 'Sergio']}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'Anello_di_smeraldi': ['Marco', 'Giorgio'], 'Anello': ['Silvia', 'Sergio'], 'Vaso': ['Anna', 'Sergio']}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex4 
+
+Input: 'eredita4.csv' 
+
+Output atteso:
+----------------------------------
+{'Anello_di_smeraldi': ['Marco', 'Giorgio'], 'Anello': ['Silvia', 'Giorgio'], 'Vaso': ['Anna', 'Anna']}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'Anello_di_smeraldi': ['Marco', 'Giorgio'], 'Anello': ['Silvia', 'Giorgio'], 'Vaso': ['Anna', 'Anna']}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex4 
+
+Input: 'eredita5.csv' 
+
+Output atteso:
+----------------------------------
+{'Anello_di_smeraldi': ['Marco', 'Giorgio'], 'Anello': ['Silvia', 'Sergio'], 'Vaso': ['Sergio', 'Anna']}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'Anello_di_smeraldi': ['Marco', 'Giorgio'], 'Anello': ['Silvia', 'Sergio'], 'Vaso': ['Sergio', 'Anna']}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex4 
+
+Input: 'eredita6.csv' 
+
+Output atteso:
+----------------------------------
+{'braccialetto': ['Maria', 'Giorgia'], 'libro': ['Silvia', 'Paolo']}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'braccialetto': ['Maria', 'Giorgia'], 'libro': ['Silvia', 'Paolo']}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex4 
+
+Input: 'eredita7.csv' 
+
+Output atteso:
+----------------------------------
+{'braccialetto': ['Marco', 'Giorgio'], 'anello': ['Silvia', 'Sergio']}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'braccialetto': ['Marco', 'Giorgio'], 'anello': ['Silvia', 'Sergio']}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex4 
+
+Input: 'eredita8.csv' 
+
+Output atteso:
+----------------------------------
+{'braccialetto': ['Marco', 'Giorgio'], 'anello': ['Silvia', 'Sergio'], 'vaso': ['Anna', 'Sergio']}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'braccialetto': ['Marco', 'Giorgio'], 'anello': ['Silvia', 'Sergio'], 'vaso': ['Anna', 'Sergio']}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex4 
+
+Input: 'eredita9.csv' 
+
+Output atteso:
+----------------------------------
+{'braccialetto': ['Marco', 'Giorgio'], 'anello': ['Silvia', 'Giorgio'], 'vaso': ['Anna', 'Anna']}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'braccialetto': ['Marco', 'Giorgio'], 'anello': ['Silvia', 'Giorgio'], 'vaso': ['Anna', 'Anna']}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex4 
+
+Input: 'eredita10.csv' 
+
+Output atteso:
+----------------------------------
+{'braccialetto': ['Marco', 'Giorgio'], 'anello': ['Silvia', 'Sergio'], 'vaso': ['Sergio', 'Anna']}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'braccialetto': ['Marco', 'Giorgio'], 'anello': ['Silvia', 'Sergio'], 'vaso': ['Sergio', 'Anna']}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************

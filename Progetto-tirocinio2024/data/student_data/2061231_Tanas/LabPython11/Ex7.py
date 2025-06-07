@@ -1,0 +1,41 @@
+def Ex7(file):
+    d = {"invalidi": 0, "domestici": 0, "altri": 0}
+
+    with open(file, encoding='UTF-8') as f:
+        for l in f:
+            ip = l.strip().split(".")
+            invalid = False
+            for subip in ip:
+                if len(subip) > 3 or int(subip) > 255:
+                    d["invalidi"] += 1
+                    invalid = True
+                    break
+                    
+            if invalid:
+                continue
+            
+            ip = [int(e) for e in ip]
+            if ip[0] == 192 and ip[1] == 168:
+                d["domestici"] += 1
+            else:
+                d['altri'] += 1
+    
+    return d
+
+    
+###############################################################################
+
+if __name__ == '__main__':
+    from tester import tester_fun
+    import re
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex7, ["ip1.txt"] , {'invalidi': 0, 'domestici': 0, 'altri': 5})
+    counter_test_positivi += tester_fun(Ex7, ["ip2.txt"] , {'invalidi': 2, 'domestici': 1, 'altri': 2})
+    counter_test_positivi += tester_fun(Ex7, ["ip3.txt"] , {'invalidi': 1, 'domestici': 1, 'altri': 3})
+    counter_test_positivi += tester_fun(Ex7, ["ip4.txt"] , {'invalidi': 1, 'domestici': 1, 'altri': 3})
+    counter_test_positivi += tester_fun(Ex7, ["ip5.txt"] , {'invalidi': 3, 'domestici': 0, 'altri': 2})
+    
+    print('La funzione',Ex7.__name__,'ha superato',counter_test_positivi,'test su',total_tests)

@@ -1,0 +1,100 @@
+=== 2031203_Giandomenico - Ex4.py ===
+def Ex4(file):
+    """MODIFICARE IL CONTENUTO DI QUESTA FUNZIONE PER SVOLGERE L'ESERCIZIO"""
+    f = open(file,encoding="UTF-8")
+    f.readline()
+    d = {}
+    for i in f:
+        x = "".join(i.strip().split())
+        xs = x.strip().split(',')
+        if xs[0] not in d:
+            d[xs[0]] = []
+            d[xs[0]].append(xs[1])
+            d[xs[0]].append(xs[2])
+        elif d[xs[0]][1] == xs[1]:
+            d[xs[0]].remove(xs[1])
+            d[xs[0]].append(xs[2])
+    f.close()
+    return d
+###############################################################################
+
+"""NON MODIFICARE, codice di testing della funzione"""
+
+if __name__ == '__main__':
+    from tester import tester_fun
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex4, ["eredita1.csv"] , {'Anello_di_smeraldi': ['Maria', 'Giorgia'], 'Anello': ['Silvia', 'Paolo']})
+    counter_test_positivi += tester_fun(Ex4, ["eredita2.csv"] , {'Anello_di_smeraldi': ['Marco', 'Giorgio'], 'Anello': ['Silvia', 'Sergio']})
+    counter_test_positivi += tester_fun(Ex4, ["eredita3.csv"] , {'Anello_di_smeraldi': ['Marco', 'Giorgio'], 'Anello': ['Silvia', 'Sergio'], 'Vaso': ['Anna', 'Sergio']})
+    counter_test_positivi += tester_fun(Ex4, ["eredita4.csv"] , {'Anello_di_smeraldi': ['Marco', 'Giorgio'], 'Anello': ['Silvia', 'Giorgio'], 'Vaso': ['Anna', 'Anna']})
+    counter_test_positivi += tester_fun(Ex4, ["eredita5.csv"] , {'Anello_di_smeraldi': ['Marco', 'Giorgio'], 'Anello': ['Silvia', 'Sergio'], 'Vaso': ['Sergio', 'Anna']})
+
+    print('La funzione',Ex4.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+
+============================================================
+=== 2049851_DelBuono - Ex4.py ===
+def Ex4(file):
+    """MODIFICARE IL CONTENUTO DI QUESTA FUNZIONE PER SVOLGERE L'ESERCIZIO"""
+    f = open(file,encoding="UTF-8")
+    f.readline()
+    d = {}
+    for i in f:
+        x = "".join(i.strip().split())
+        xs = x.strip().split(',')
+        if xs[0] not in d:
+            d[xs[0]] = []
+            d[xs[0]].append(xs[1])
+            d[xs[0]].append(xs[2])
+        elif d[xs[0]][1] == xs[1]:
+            d[xs[0]].remove(xs[1])
+            d[xs[0]].append(xs[2])
+    f.close()
+    return d
+###############################################################################
+##Ex4(file): Scrivere una funzione Python che prende in ingresso il nome di un file csv contenente tutte le
+##eredità di una famiglia nel seguente formato:
+##Oggetto,Antenato,Erede
+##Assumete che il proprietario dell’oggetto sia l’antenato che compare la prima volta (dall’inizio del file)
+##assieme all’oggetto e che se l’antenato NON ha l’oggetto allora l’erede NON lo riceve. Assumete inoltre
+##che l’ordine delle righe conti: in una riga, l’antenato A possiede un oggetto solo se A è il proprietario,
+##oppure se esiste una riga precedente in cui A riceve l’oggetto da un antenato che ha l’oggetto.
+##La funzione deve leggere il file e restituire il dizionario con chiavi i nomi degli oggetti nel file e come
+##valore associato a ciascuna chiave k una lista contenente due nomi, il nome del proprietario e il nome
+##dell’ultimo erede che ha ricevuto l’oggetto k. Ad esempio se il file contiene:
+##Oggetto,Antenato,Erede
+##Anello_di_smeraldi,Maria,Paola
+##Anello,Silvia,Paolo
+##Anello_di_smeraldi,Paola,Anna
+##Anello_di_smeraldi,Anna,Giorgia
+##la funzione deve restituire:
+##{'Anello_di_smeraldi': ['Maria','Giorgia'], 'Anello': ['Silvia',
+##'Paolo']}
+##Invece se il file contiene:
+##Oggetto,Antenato,Erede
+##Anello_di_smeraldi,Maria,Paola
+##Anello,Silvia,Paolo
+##Anello_di_smeraldi,Anna,Giorgia
+##Anello_di_smeraldi,Paola,Anna
+##la funzione deve restituire:
+##{'Anello_di_smeraldi':['Maria','Anna'],'Anello':['Silvia','Paolo']}
+##(infatti, alla riga Anello_di_smeraldi,Anna,Giorgia Anna non ha l’oggetto, perché non lo
+##ha ricevuto in una riga precedente).
+"""NON MODIFICARE, codice di testing della funzione"""
+
+if __name__ == '__main__':
+    from tester import tester_fun
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex4, ["eredita1.csv"] , {'Anello_di_smeraldi': ['Maria', 'Giorgia'], 'Anello': ['Silvia', 'Paolo']})
+    counter_test_positivi += tester_fun(Ex4, ["eredita2.csv"] , {'Anello_di_smeraldi': ['Marco', 'Giorgio'], 'Anello': ['Silvia', 'Sergio']})
+    counter_test_positivi += tester_fun(Ex4, ["eredita3.csv"] , {'Anello_di_smeraldi': ['Marco', 'Giorgio'], 'Anello': ['Silvia', 'Sergio'], 'Vaso': ['Anna', 'Sergio']})
+    counter_test_positivi += tester_fun(Ex4, ["eredita4.csv"] , {'Anello_di_smeraldi': ['Marco', 'Giorgio'], 'Anello': ['Silvia', 'Giorgio'], 'Vaso': ['Anna', 'Anna']})
+    counter_test_positivi += tester_fun(Ex4, ["eredita5.csv"] , {'Anello_di_smeraldi': ['Marco', 'Giorgio'], 'Anello': ['Silvia', 'Sergio'], 'Vaso': ['Sergio', 'Anna']})
+
+    print('La funzione',Ex4.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+

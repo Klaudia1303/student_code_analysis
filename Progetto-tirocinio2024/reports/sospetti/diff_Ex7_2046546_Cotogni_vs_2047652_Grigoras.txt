@@ -1,0 +1,91 @@
+=== 2046546_Cotogni - Ex7.py ===
+def Ex7(file):
+    diz = {}
+    inval = []
+    dom = []
+    altri = []
+    pattern = r'^([0-9]{0,3})\.([0-9]{0,3})\.([0-9]{0,3})\.([0-9]{0,3})$'
+    with open(file, 'r', encoding = 'utf-8') as f:
+        testo = f.read()
+        f.seek(0)
+        righe = f.readlines()
+    matches = re.finditer(pattern, testo, re.MULTILINE)
+    listamatches = re.findall(pattern,testo, re.MULTILINE)
+    for m in matches:
+        print(m)
+        if int(m.group(1)) >255 or int(m.group(2)) >255 or int(m.group(3)) >255 or int(m.group(4)) >255:
+            inval.append(m)
+            continue
+        if m.group(1) == '192' and m.group(2) == '168':
+            dom.append(m)
+        else:
+            altri.append(m)
+    diz['invalidi'] = len(inval) + len(righe) - len(listamatches)
+    diz['domestici'] = len(dom)
+    diz['altri'] = len(altri)
+    return diz            
+    """MODIFICARE IL CONTENUTO DI QUESTA FUNZIONE PER SVOLGERE L'ESERCIZIO"""    
+    
+###############################################################################
+
+if __name__ == '__main__':
+    from tester import tester_fun
+    import re
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex7, ["ip1.txt"] , {'invalidi': 0, 'domestici': 0, 'altri': 5})
+    counter_test_positivi += tester_fun(Ex7, ["ip2.txt"] , {'invalidi': 2, 'domestici': 1, 'altri': 2})
+    counter_test_positivi += tester_fun(Ex7, ["ip3.txt"] , {'invalidi': 1, 'domestici': 1, 'altri': 3})
+    counter_test_positivi += tester_fun(Ex7, ["ip4.txt"] , {'invalidi': 1, 'domestici': 1, 'altri': 3})
+    counter_test_positivi += tester_fun(Ex7, ["ip5.txt"] , {'invalidi': 3, 'domestici': 0, 'altri': 2})
+    
+    print('La funzione',Ex7.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+
+============================================================
+=== 2047652_Grigoras - Ex7.py ===
+def Ex7(file):
+    diz = {}
+    inval = []
+    dom = []
+    altri = []
+    pattern = r'^([0-9]{0,3})\.([0-9]{0,3})\.([0-9]{0,3})\.([0-9]{0,3})$'
+    with open(file, 'r', encoding = 'utf-8') as f:
+        testo = f.read()
+        f.seek(0)
+        righe = f.readlines()
+    matches = re.finditer(pattern, testo, re.MULTILINE)
+    listamatches = re.findall(pattern,testo, re.MULTILINE)
+    for m in matches:
+        print(m)
+        if int(m.group(1)) >255 or int(m.group(2)) >255 or int(m.group(3)) >255 or int(m.group(4)) >255:
+            inval.append(m)
+            continue
+        if m.group(1) == '192' and m.group(2) == '168':
+            dom.append(m)
+        else:
+            altri.append(m)
+    diz['invalidi'] = len(inval) + len(righe) - len(listamatches)
+    diz['domestici'] = len(dom)
+    diz['altri'] = len(altri)
+    return diz            
+    """MODIFICARE IL CONTENUTO DI QUESTA FUNZIONE PER SVOLGERE L'ESERCIZIO"""    
+    
+###############################################################################
+
+if __name__ == '__main__':
+    from tester import tester_fun
+    import re
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex7, ["ip1.txt"] , {'invalidi': 0, 'domestici': 0, 'altri': 5})
+    counter_test_positivi += tester_fun(Ex7, ["ip2.txt"] , {'invalidi': 2, 'domestici': 1, 'altri': 2})
+    counter_test_positivi += tester_fun(Ex7, ["ip3.txt"] , {'invalidi': 1, 'domestici': 1, 'altri': 3})
+    counter_test_positivi += tester_fun(Ex7, ["ip4.txt"] , {'invalidi': 1, 'domestici': 1, 'altri': 3})
+    counter_test_positivi += tester_fun(Ex7, ["ip5.txt"] , {'invalidi': 3, 'domestici': 0, 'altri': 2})
+    
+    print('La funzione',Ex7.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+

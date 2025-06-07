@@ -1,0 +1,5 @@
+s=int(input('hh: '))
+t=int(input('mm: '))
+u=int(input('ss: '))
+v=(s*3600+t*60+u)
+print(v)

@@ -1,0 +1,5 @@
+hh=int(input("inserire il numero di ore: "))
+mm=int(input("inserire il numero di minuti: "))
+ss=int(input("inserire il numero di secondi: "))
+seconditotali=ss+(mm*60)+(hh*3600)
+print(seconditotali)

@@ -1,0 +1,170 @@
+Test Ex7 
+
+Input: 'ip1.txt' 
+
+Output atteso:
+----------------------------------
+{'invalidi': 0, 'domestici': 0, 'altri': 5}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'invalidi': 0, 'domestici': 0, 'altri': 5}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex7 
+
+Input: 'ip2.txt' 
+
+Output atteso:
+----------------------------------
+{'invalidi': 2, 'domestici': 1, 'altri': 2}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'invalidi': 2, 'domestici': 1, 'altri': 2}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex7 
+
+Input: 'ip3.txt' 
+
+Output atteso:
+----------------------------------
+{'invalidi': 1, 'domestici': 1, 'altri': 3}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'invalidi': 1, 'domestici': 1, 'altri': 3}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex7 
+
+Input: 'ip4.txt' 
+
+Output atteso:
+----------------------------------
+{'invalidi': 1, 'domestici': 1, 'altri': 3}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'invalidi': 1, 'domestici': 1, 'altri': 3}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex7 
+
+Input: 'ip5.txt' 
+
+Output atteso:
+----------------------------------
+{'invalidi': 3, 'domestici': 0, 'altri': 2}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'invalidi': 3, 'domestici': 0, 'altri': 2}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex7 
+
+Input: 'ip6.txt' 
+
+Output atteso:
+----------------------------------
+{'invalidi': 2, 'domestici': 1, 'altri': 0}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'invalidi': 2, 'domestici': 1, 'altri': 0}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex7 
+
+Input: 'ip7.txt' 
+
+Output atteso:
+----------------------------------
+{'invalidi': 1, 'domestici': 0, 'altri': 2}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'invalidi': 1, 'domestici': 0, 'altri': 2}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex7 
+
+Input: 'ip8.txt' 
+
+Output atteso:
+----------------------------------
+{'invalidi': 0, 'domestici': 0, 'altri': 0}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'invalidi': 0, 'domestici': 0, 'altri': 0}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex7 
+
+Input: 'ip9.txt' 
+
+Output atteso:
+----------------------------------
+{'invalidi': 2, 'domestici': 0, 'altri': 3}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'invalidi': 2, 'domestici': 0, 'altri': 3}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex7 
+
+Input: 'ip10.txt' 
+
+Output atteso:
+----------------------------------
+{'invalidi': 1, 'domestici': 0, 'altri': 2}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'invalidi': 1, 'domestici': 0, 'altri': 2}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************

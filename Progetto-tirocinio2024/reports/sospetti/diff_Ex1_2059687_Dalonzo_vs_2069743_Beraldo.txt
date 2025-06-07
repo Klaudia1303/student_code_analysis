@@ -1,0 +1,93 @@
+=== 2059687_Dalonzo - Ex1.py ===
+def Ex1(file):
+    """MODIFICARE IL CONTENUTO DI QUESTA FUNZIONE PER SVOLGERE L'ESERCIZIO"""
+    import re
+    f = open(file,encoding='UTF-8')
+    testo = f.read()
+    occ = 0
+    pattern = r'\b(\w)\w*(\w)\b\W*\b\1\w*\2\b'
+    # /b specifica spazio o carattere prima della lettera
+    # (\w) gruppo 1 che indica il primo carattere
+    # \w* indica una ripetizione indefinita di caratteri in mezzo
+    # (\w) ultima carattere
+    # \b fine della parola
+    # W* caratteri non alfabetici per un numero indefinito
+    # \b fine di questi caratteri
+    # controllo match con gruppo 1 con \1
+    # lettere in mezzo per un numero indefinito
+    # conrollo match con gruppo 2
+    # fine parola
+
+    matches = re.finditer(pattern,testo,re.IGNORECASE)
+
+    for i in matches:
+        occ += 1
+
+
+
+    return occ
+  
+###############################################################################
+
+if __name__ == '__main__':
+    from tester import tester_fun
+    import re
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex1, ["file1_1.txt"] , 1)
+    counter_test_positivi += tester_fun(Ex1, ["file1_2.txt"] , 2)
+    counter_test_positivi += tester_fun(Ex1, ["file1_3.txt"] , 3)
+    counter_test_positivi += tester_fun(Ex1, ["file1_4.txt"] , 3)
+    counter_test_positivi += tester_fun(Ex1, ["file1_5.txt"] , 5)
+
+    print('La funzione',Ex1.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+
+============================================================
+=== 2069743_Beraldo - Ex1.py ===
+def Ex1(file):
+    """MODIFICARE IL CONTENUTO DI QUESTA FUNZIONE PER SVOLGERE L'ESERCIZIO"""
+    import re
+    f = open(file,encoding='UTF-8')
+    testo = f.read()
+    occ = 0
+    pattern = r'\b(\w)\w*(\w)\b\W*\b\1\w*\2\b'
+    # /b specifica spazio o carattere prima della lettera
+    # (\w) gruppo 1 che indica il primo carattere
+    # \w* indica una ripetizione indefinita di caratteri in mezzo
+    # (\w) ultima carattere
+    # \b fine della parola
+    # W* caratteri non alfabetici per un numero indefinito
+    # \b fine di questi caratteri
+    # controllo match con gruppo 1 con \1
+    # lettere in mezzo per un numero indefinito
+    # conrollo match con gruppo 2
+    # fine parola
+
+    matches = re.finditer(pattern,testo,re.IGNORECASE)
+
+    for i in matches:
+        occ += 1
+
+
+
+    return occ
+  
+###############################################################################
+
+if __name__ == '__main__':
+    from tester import tester_fun
+    import re
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex1, ["file1_1.txt"] , 1)
+    counter_test_positivi += tester_fun(Ex1, ["file1_2.txt"] , 2)
+    counter_test_positivi += tester_fun(Ex1, ["file1_3.txt"] , 3)
+    counter_test_positivi += tester_fun(Ex1, ["file1_4.txt"] , 3)
+    counter_test_positivi += tester_fun(Ex1, ["file1_5.txt"] , 5)
+
+    print('La funzione',Ex1.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+

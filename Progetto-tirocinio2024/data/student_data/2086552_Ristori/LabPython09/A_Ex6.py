@@ -1,0 +1,43 @@
+def A_Ex6(fileName):
+    fin=open(fileName,"r",encoding="UTF-8")
+    dati=fin.readline().strip().split(",")
+    totSpeseMax=0
+    for i in range(1,len(dati)):
+        fin=open(fileName,"r",encoding="UTF-8")
+        riga=fin.readline()
+        riga=fin.readline()
+        totSpese=0
+        while len(riga)>0:
+            dati=riga.strip().split(",")
+            totSpese=totSpese+int(dati[i])
+            riga=fin.readline()
+        if totSpese>=totSpeseMax:
+            totSpeseMax=totSpese
+            indexMax=i
+    fin.close()
+    fin=open(fileName,"r",encoding="UTF-8")
+    riga=fin.readline()
+    dati=riga.strip().split(",")
+    anno=int(dati[indexMax])
+    return anno
+    
+            
+    #"""MODIFICARE IL CONTENUTO DI QUESTA FUNZIONE PER SVOLGERE L'ESERCIZIO"""
+ 
+###############################################################################
+
+"""NON MODIFICARE, codice di testing della funzione"""
+
+if __name__ == '__main__':
+    from tester import tester_fun
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(A_Ex6, ['Vendite1.csv'] , 2010)
+    counter_test_positivi += tester_fun(A_Ex6, ['Vendite2.csv'] , 2013)
+    counter_test_positivi += tester_fun(A_Ex6, ['Vendite3.csv'] , 2013)
+    counter_test_positivi += tester_fun(A_Ex6, ['Vendite4.csv'] , 2020)
+    counter_test_positivi += tester_fun(A_Ex6, ['Vendite5.csv'] , 2022)
+
+    print('La funzione',A_Ex6.__name__,'ha superato',counter_test_positivi,'test su',total_tests)

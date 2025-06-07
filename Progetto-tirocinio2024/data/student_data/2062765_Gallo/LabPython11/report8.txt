@@ -1,0 +1,170 @@
+Test Ex8 
+
+Input: 'codici1.txt' 
+
+Output atteso:
+----------------------------------
+['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato']
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato']
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex8 
+
+Input: 'codici2.txt' 
+
+Output atteso:
+----------------------------------
+['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato', 'Giorno errato', 'Codice errato', 'Giorno errato']
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato', 'Giorno errato', 'Codice errato', 'Giorno errato']
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex8 
+
+Input: 'codici3.txt' 
+
+Output atteso:
+----------------------------------
+['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato', 'Giorno errato', 'Codice errato', 'Giorno errato', '01/11/1921']
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato', 'Giorno errato', 'Codice errato', 'Giorno errato', '01/11/1921']
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex8 
+
+Input: 'codici4.txt' 
+
+Output atteso:
+----------------------------------
+['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato', 'Giorno errato', 'Codice errato', 'Giorno errato', '01/11/1921', '01/11/1931']
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato', 'Giorno errato', 'Codice errato', 'Giorno errato', '01/11/1921', '01/11/1931']
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex8 
+
+Input: 'codici5.txt' 
+
+Output atteso:
+----------------------------------
+['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato', 'Giorno errato', 'Codice errato', 'Giorno errato', '01/11/1921', '01/11/1931', 'Codice errato', 'Giorno errato']
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+['12/03/1971', 'Codice errato', '15/04/2011', 'Mese errato', 'Giorno errato', 'Giorno errato', 'Codice errato', 'Giorno errato', '01/11/1921', '01/11/1931', 'Codice errato', 'Giorno errato']
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex8 
+
+Input: 'codici6.txt' 
+
+Output atteso:
+----------------------------------
+['Mese errato']
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+['Mese errato']
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex8 
+
+Input: 'codici7.txt' 
+
+Output atteso:
+----------------------------------
+['Codice errato']
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+['Codice errato']
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex8 
+
+Input: 'codici8.txt' 
+
+Output atteso:
+----------------------------------
+['Codice errato']
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+['Codice errato']
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex8 
+
+Input: 'codici9.txt' 
+
+Output atteso:
+----------------------------------
+['01/08/2020']
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+['1/08/2020']
+----------------------------------
+
+Risultato Test: NEGATIVO
+
+******************************
+Test Ex8 
+
+Input: 'codici10.txt' 
+
+Output atteso:
+----------------------------------
+['Giorno errato']
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+['51/08/2020']
+----------------------------------
+
+Risultato Test: NEGATIVO
+
+******************************

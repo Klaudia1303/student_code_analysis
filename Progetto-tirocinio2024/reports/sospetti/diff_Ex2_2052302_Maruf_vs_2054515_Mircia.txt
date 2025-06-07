@@ -1,0 +1,65 @@
+=== 2052302_Maruf - Ex2.py ===
+def Ex2(file):
+    regex = r'\b\w*(\w)\w*(\w)\w*\b[-!$%^&*()_+|~=`{}\[\]:";\'<>?,.\/\s]+\b\w*\2\w*\1\w*\b'
+    file = open(file, encoding="UTF-8")
+    text = file.read()
+    matches = re.findall(regex, text, re.IGNORECASE)
+    return len(matches)
+
+###############################################################################
+
+if __name__ == '__main__':
+    from tester import tester_fun
+    import re
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex2, ["file2_1.txt"] , 3)
+    counter_test_positivi += tester_fun(Ex2, ["file2_2.txt"] , 6)
+    counter_test_positivi += tester_fun(Ex2, ["file2_3.txt"] , 8)
+    counter_test_positivi += tester_fun(Ex2, ["file2_4.txt"] , 9)
+    counter_test_positivi += tester_fun(Ex2, ["file2_5.txt"] , 11)
+    
+    print('La funzione',Ex2.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+
+============================================================
+=== 2054515_Mircia - Ex2.py ===
+def Ex2(file):
+
+	# !! COSTRUZIONE DEL REGEX !!
+    # 1) raggruppi 2 lettere della prima parola						(\w)(\w)
+    # 2) consideri che si trovano in una posizione 
+    #    qualunque all'interno della parola							\w*(\w)(\w)\w*
+    # 3) consideri che potrebbero non essere adiacenti				\w*(\w)\w*(\w)\w*
+	# 4) aggiungi lo spazio che separa le 2 parole					\w*(\w)\w*(\w)\w*\s+
+	# 5) la seconda parola deve contenere le lettere 
+	#    raggruppate in ordine inverso di apparizione,  
+	#    quindi prima il secondo gruppo e poi il primo				\w*(\w)\w*(\w)\w*\s+\2\1
+	# 6) stesse considerazioni della prima parola					\w*(\w)\w*(\w)\w*\s+\w*\2\w*\1\w*
+	# 7) aggiungi i boundary										\b\w*(\w)\w*(\w)\w*\b\s+\b\w*\2\w*\1\w*\b
+
+
+    regex = r'\b\w*(\w)\w*(\w)\w*\b[-!$%^&*()_+|~=`{}\[\]:";\'<>?,.\/\s]+\b\w*\2\w*\1\w*\b'
+    file = open(file, encoding="UTF-8")
+    text = file.read()
+    matches = re.findall(regex, text, re.IGNORECASE)
+    return len(matches)
+
+###############################################################################
+
+if __name__ == '__main__':
+    from tester import tester_fun
+    import re
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex2, ["file2_1.txt"] , 3)
+    counter_test_positivi += tester_fun(Ex2, ["file2_2.txt"] , 6)
+    counter_test_positivi += tester_fun(Ex2, ["file2_3.txt"] , 8)
+    counter_test_positivi += tester_fun(Ex2, ["file2_4.txt"] , 9)
+    counter_test_positivi += tester_fun(Ex2, ["file2_5.txt"] , 11)
+    
+    print('La funzione',Ex2.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+

@@ -1,0 +1,83 @@
+=== 2047444_Micangeli - Ex5.py ===
+def Ex5(file):
+    f=open(file)
+    r=0
+    for riga in f:
+        r+=1
+    f=open(file).read()
+    d={}
+    pattern='^[A-Z]{2}[0-9]{3}[A-Z]{2}$'
+    A=re.findall(pattern,f,re.MULTILINE)
+    d['auto']=len(A)
+    pattern='^[A-Z]{2}[0-9]{5}$'
+    B=re.findall(pattern,f,re.MULTILINE)
+    d['moto']=len(B)
+    pattern='^[A-Z0-9]{5}$'
+    C=re.findall(pattern,f,re.MULTILINE)
+    d['ciclomotore1']=len(C)
+    pattern='^[A-Z0-9]{6}$'
+    D=re.findall(pattern,f,re.MULTILINE)
+    d['ciclomotore2']=len(D)
+    d['errata']=r-d['auto']-d['moto']-d['ciclomotore1']-d['ciclomotore2']
+    return d
+    
+    
+      
+###############################################################################
+
+if __name__ == '__main__':
+    from tester import tester_fun
+    import re
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex5, ["targhe1.txt"] , {'auto': 2, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 1})
+    counter_test_positivi += tester_fun(Ex5, ["targhe2.txt"] , {'auto': 2, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 2})
+    counter_test_positivi += tester_fun(Ex5, ["targhe3.txt"] , {'auto': 3, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 3})
+    counter_test_positivi += tester_fun(Ex5, ["targhe4.txt"] , {'auto': 3, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 4})
+    counter_test_positivi += tester_fun(Ex5, ["targhe5.txt"] , {'auto': 2, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 5})
+    
+    print('La funzione',Ex5.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+
+============================================================
+=== 2064711_Reiser - Ex5.py ===
+def Ex5(file):
+    f=open(file)
+    r=0
+    for riga in f:
+        r+=1
+    f=open(file).read()
+    d={}
+    pattern='^[A-Z]{2}[0-9]{3}[A-Z]{2}$'
+    A=re.findall(pattern,f,re.MULTILINE)
+    d['auto']=len(A)
+    pattern='^[A-Z]{2}[0-9]{5}$'
+    B=re.findall(pattern,f,re.MULTILINE)
+    d['moto']=len(B)
+    pattern='^[A-Z0-9]{5}$'
+    C=re.findall(pattern,f,re.MULTILINE)
+    d['ciclomotore1']=len(C)
+    pattern='^[A-Z0-9]{6}$'
+    D=re.findall(pattern,f,re.MULTILINE)
+    d['ciclomotore2']=len(D)
+    d['errata']=r-d['auto']-d['moto']-d['ciclomotore1']-d['ciclomotore2']
+    return d
+      
+###############################################################################
+
+if __name__ == '__main__':
+    from tester import tester_fun
+    import re
+
+    counter_test_positivi = 0
+    total_tests = 5
+
+    counter_test_positivi += tester_fun(Ex5, ["targhe1.txt"] , {'auto': 2, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 1})
+    counter_test_positivi += tester_fun(Ex5, ["targhe2.txt"] , {'auto': 2, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 2})
+    counter_test_positivi += tester_fun(Ex5, ["targhe3.txt"] , {'auto': 3, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 3})
+    counter_test_positivi += tester_fun(Ex5, ["targhe4.txt"] , {'auto': 3, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 4})
+    counter_test_positivi += tester_fun(Ex5, ["targhe5.txt"] , {'auto': 2, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 5})
+    
+    print('La funzione',Ex5.__name__,'ha superato',counter_test_positivi,'test su',total_tests)
+

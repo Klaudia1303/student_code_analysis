@@ -1,0 +1,6 @@
+n=int(input('inserisci un intero positivo: '))
+a=1
+while a<=n:
+    if n%a==0:
+        print (a)
+    a=a+1

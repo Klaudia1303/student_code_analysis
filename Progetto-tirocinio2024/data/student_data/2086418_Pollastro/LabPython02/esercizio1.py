@@ -1,0 +1,5 @@
+hh=int(input('numero di ore'))
+mm=int(input('numero di minuti'))
+ss=int(input('numero di secondi'))
+x= ((hh*3600)+(mm*60)+ss)
+print(x)

@@ -1,0 +1,170 @@
+Test Ex5 
+
+Input: 'targhe1.txt' 
+
+Output atteso:
+----------------------------------
+{'auto': 2, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 1}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'auto': 2, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 1}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex5 
+
+Input: 'targhe2.txt' 
+
+Output atteso:
+----------------------------------
+{'auto': 2, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 2}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'auto': 2, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 2}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex5 
+
+Input: 'targhe3.txt' 
+
+Output atteso:
+----------------------------------
+{'auto': 3, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 3}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'auto': 3, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 3}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex5 
+
+Input: 'targhe4.txt' 
+
+Output atteso:
+----------------------------------
+{'auto': 3, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 4}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'auto': 3, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 4}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex5 
+
+Input: 'targhe5.txt' 
+
+Output atteso:
+----------------------------------
+{'auto': 2, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 5}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'auto': 2, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 5}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex5 
+
+Input: 'targhe6.txt' 
+
+Output atteso:
+----------------------------------
+{'auto': 2, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 1}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'auto': 2, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 1}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex5 
+
+Input: 'targhe7.txt' 
+
+Output atteso:
+----------------------------------
+{'auto': 2, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 2}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'auto': 2, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 2}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex5 
+
+Input: 'targhe8.txt' 
+
+Output atteso:
+----------------------------------
+{'auto': 3, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 3}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'auto': 3, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 3}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex5 
+
+Input: 'targhe9.txt' 
+
+Output atteso:
+----------------------------------
+{'auto': 3, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 4}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'auto': 3, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 4}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
+Test Ex5 
+
+Input: 'targhe10.txt' 
+
+Output atteso:
+----------------------------------
+{'auto': 2, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 5}
+----------------------------------
+
+Output ottenuto:
+----------------------------------
+{'auto': 2, 'moto': 1, 'ciclomotore1': 1, 'ciclomotore2': 1, 'errata': 5}
+----------------------------------
+
+Risultato Test: POSITIVO
+
+******************************
