@@ -1,0 +1,11 @@
+# Dati locali da non caricare su GitHub
+data/
+dataset/
+models/
+reports/
+
+# File temporanei di Python
+*.pyc
+__pycache__/
+.env
+.DS_Store
